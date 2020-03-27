@@ -292,7 +292,7 @@ namespace StrongGrid
 		/// <param name="apiKey">Your api key.</param>
 		/// <param name="username">Your username. Ignored if the api key is specified.</param>
 		/// <param name="password">Your password. Ignored if the api key is specified.</param>
-		/// <param name="handler">Allows you to inject your own HttpClient. This is useful, for example, to setup the HtppClient with a proxy.</param>
+		/// <param name="handler">Allows you to inject your own Http message handler.</param>
 		/// <param name="options">Options for the SendGrid client.</param>
 		/// <param name="logger">Logger.</param>
 		public BaseClient(string apiKey, string username, string password, HttpMessageHandler handler, StrongGridClientOptions options, ILogger logger = null)
