@@ -357,7 +357,7 @@ namespace StrongGrid.Resources
 				request.Headers.Add(header.Key, header.Value);
 			}
 
-			using (var client = new HttpClient())
+			using (var client = Utils.HttpClientFactory.CreateClient("StrongGrid-helper-httpclient"))
 			{
 				await client.SendAsync(request).ConfigureAwait(false);
 			}
@@ -427,7 +427,7 @@ namespace StrongGrid.Resources
 			if (job.Status != JobStatus.Ready) throw new Exception("The job is not ready");
 
 			var streams = new Stream[job.FileUrls.Length];
-			using (var client = new HttpClient())
+			using (var client = Utils.HttpClientFactory.CreateClient("StrongGrid-helper-httpclient"))
 			{
 				for (int i = 0; i < job.FileUrls.Length; i++)
 				{

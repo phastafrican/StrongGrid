@@ -11,5 +11,7 @@ namespace StrongGrid.Utilities
 		public static DateTime Epoch { get; } = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
 		public static RecyclableMemoryStreamManager MemoryStreamManager { get; } = new RecyclableMemoryStreamManager();
+
+		public static HttpClientFactory HttpClientFactory { get; } = new HttpClientFactory();
 	}
 }
